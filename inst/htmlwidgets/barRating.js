@@ -28,6 +28,7 @@ HTMLWidgets.widget({
             mySelect.appendChild(opt);
         }
 
+
         // Return value
         var myValue = el.id + "_value";
         $(mySelect).barrating({
@@ -36,6 +37,10 @@ HTMLWidgets.widget({
             Shiny.onInputChange(myValue, value);
           }
         });
+
+        if (x.value && x.choices.indexOf(x.value) >= 0) {
+          $(mySelect).barrating('set', x.value);
+        }
 
       },
 

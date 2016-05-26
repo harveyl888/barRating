@@ -4,7 +4,7 @@ library(shiny)
 library(barRating)
 
 server <- function(input, output) {
-  output$ex1 <- renderBarRating(barRating(c('A', 'B', 'C')))
+  output$ex1 <- renderBarRating(barRating(seq(0,5), 3))
   output$txt1 <- renderPrint({input$ex1_value})
 }
 
