@@ -21,11 +21,10 @@ HTMLWidgets.widget({
         myDiv.appendChild(mySelect);
 
         // Add options
-        myoptions = ['1', '2', '3', '4'];
-        for (var i = 0; i < myoptions.length; i++) {
+        for (var i = 0; i < x.choices.length; i++) {
             var opt = document.createElement("option");
-            opt.value = myoptions[i];
-            opt.text = myoptions[i];
+            opt.value = x.choices[i];
+            opt.text = x.choices[i];
             mySelect.appendChild(opt);
         }
 
