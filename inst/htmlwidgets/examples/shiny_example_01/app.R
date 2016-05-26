@@ -5,6 +5,7 @@ library(barRating)
 
 server <- function(input, output) {
   output$example1 <- renderBarRating(barRating('example'))
+  output$txt1 <- renderPrint({input$shinydataout})
 }
 
 ui <- fluidPage(
@@ -16,7 +17,8 @@ ui <- fluidPage(
   HTML('<option value="4">4</option>'),
   HTML('<option value="5">5</option>'),
   HTML('</select>'),
-  barRatingOutput('example1')
+  barRatingOutput('example1'),
+  verbatimTextOutput('txt1')
 )
 
 shinyApp(ui = ui, server = server)

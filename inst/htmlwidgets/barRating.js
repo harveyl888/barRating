@@ -16,7 +16,10 @@ HTMLWidgets.widget({
 //        el.innerText = x.message;
 
             $('#example').barrating({
-              theme: 'bars-1to10'
+              theme: 'bars-1to10',
+              onSelect: function(value, text) {
+                Shiny.onInputChange('shinydataout', value);
+              }
             });
 
       },
