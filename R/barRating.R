@@ -6,12 +6,12 @@
 #' @import htmltools
 #'
 #' @export
-barRating <- function(choices, value = NULL, width = NULL, height = NULL) {
+barRating <- function(choices, selected = NULL, width = NULL, height = NULL) {
 
   # forward options using x
   x = list(
     choices = choices,
-    value = value
+    selected = selected
   )
 
   # create widget

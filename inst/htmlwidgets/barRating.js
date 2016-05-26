@@ -38,8 +38,9 @@ HTMLWidgets.widget({
           }
         });
 
-        if (x.value && x.choices.indexOf(x.value) >= 0) {
-          $(mySelect).barrating('set', x.value);
+        // Select value
+        if (x.selected && x.choices.indexOf(x.selected) >= 0) {
+          $(mySelect).barrating('set', x.selected);
         }
 
       },
