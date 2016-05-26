@@ -3,6 +3,7 @@
 #' <Add Description>
 #'
 #' @import htmlwidgets
+#' @import htmltools
 #'
 #' @export
 barRating <- function(message, width = NULL, height = NULL) {
@@ -18,9 +19,13 @@ barRating <- function(message, width = NULL, height = NULL) {
     x,
     width = width,
     height = height,
-    package = 'barRating'
+    package = 'barRating',
+    sizingPolicy = htmlwidgets::sizingPolicy(
+      viewer.fill = FALSE
+    )
   )
 }
+
 
 #' Shiny bindings for barRating
 #'
@@ -39,7 +44,7 @@ barRating <- function(message, width = NULL, height = NULL) {
 #' @name barRating-shiny
 #'
 #' @export
-barRatingOutput <- function(outputId, width = '100%', height = '400px'){
+barRatingOutput <- function(outputId, width = "auto", height = "auto"){
   htmlwidgets::shinyWidgetOutput(outputId, 'barRating', width, height, package = 'barRating')
 }
 

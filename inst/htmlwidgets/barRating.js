@@ -12,15 +12,31 @@ HTMLWidgets.widget({
 
       renderValue: function(x) {
 
-        // TODO: code to render the widget, e.g.
-//        el.innerText = x.message;
+        // Access the widget div
+        var myDiv = document.getElementById(el.id);
 
-            $('#example').barrating({
-              theme: 'bars-1to10',
-              onSelect: function(value, text) {
-                Shiny.onInputChange('shinydataout', value);
-              }
-            });
+        // Create select list
+        var mySelect = document.createElement("select");
+        mySelect.id = el.id + "_select";
+        myDiv.appendChild(mySelect);
+
+        // Add options
+        myoptions = ['1', '2', '3', '4'];
+        for (var i = 0; i < myoptions.length; i++) {
+            var opt = document.createElement("option");
+            opt.value = myoptions[i];
+            opt.text = myoptions[i];
+            mySelect.appendChild(opt);
+        }
+
+        // Return value
+        var myValue = el.id + "_value";
+        $(mySelect).barrating({
+          theme: 'bars-1to10',
+          onSelect: function(value, text) {
+            Shiny.onInputChange(myValue, value);
+          }
+        });
 
       },
 
