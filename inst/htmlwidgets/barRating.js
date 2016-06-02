@@ -21,6 +21,13 @@ HTMLWidgets.widget({
         myDiv.appendChild(mySelect);
 
         // Add options
+        if(x.includeEmpty) {  // include an empty value
+          var opt_empty = document.createElement("option");
+          opt_empty.value = '';
+          opt_empty.text = '';
+          mySelect.appendChild(opt_empty);
+        }
+
         for (var i = 0; i < x.choices.length; i++) {
             var opt = document.createElement("option");
             opt.value = x.choices[i];
