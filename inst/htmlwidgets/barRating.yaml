@@ -3,4 +3,4 @@ dependencies:
    version: 1.1.4
    src: htmlwidgets/lib
    script: jquery.barrating.min.js
-   stylesheet: bars-1to10.css
+   stylesheet: barrating_themes.css
