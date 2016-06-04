@@ -13,6 +13,7 @@ barRating <- function(choices, selected = NULL, theme = "bars-1to10", reverse = 
     choices = choices,
     selected = selected,
     theme = theme,
+    reverse = reverse,
     includeEmpty = includeEmpty
   )
 

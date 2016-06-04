@@ -4,7 +4,7 @@ library(shiny)
 library(barRating)
 
 server <- function(input, output) {
-  output$ex1 <- renderBarRating(barRating(choices = as.character(seq(5,0)), selected = '3', theme='bars-horizontal', includeEmpty = FALSE))
+  output$ex1 <- renderBarRating(barRating(choices = as.character(seq(5,0)), selected = '3', theme='bars-horizontal', reverse = TRUE, includeEmpty = FALSE))
   output$txt1 <- renderPrint({input$ex1_value})
 }
 

@@ -40,6 +40,7 @@ HTMLWidgets.widget({
         var myValue = el.id + "_value";
         $(mySelect).barrating({
           theme: x.theme,
+          reverse: x.reverse,
           onSelect: function(value, text) {
             Shiny.onInputChange(myValue, value);
           }
