@@ -39,7 +39,7 @@ HTMLWidgets.widget({
         // Return value
         var myValue = el.id + "_value";
         $(mySelect).barrating({
-          theme: 'bars-1to10',
+          theme: x.theme,
           onSelect: function(value, text) {
             Shiny.onInputChange(myValue, value);
           }
