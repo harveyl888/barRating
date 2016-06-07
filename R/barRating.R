@@ -31,6 +31,14 @@ barRating <- function(choices, selected = NULL, theme = "bars-1to10", reverse = 
 }
 
 
+#' Update a barrating widget with a value
+#'
+#' @export
+barRatingUpdate <- function(id, value, session=shiny::getDefaultReactiveDomain()) {
+  session$sendCustomMessage(type = 'jsBarRatingUpdate', list(id=id, value=value))
+}
+
+
 #' Shiny bindings for barRating
 #'
 #' Output and render functions for using barRating within Shiny

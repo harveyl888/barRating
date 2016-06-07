@@ -2,6 +2,7 @@
 
 export(barRating)
 export(barRatingOutput)
+export(barRatingUpdate)
 export(renderBarRating)
 import(htmltools)
 import(htmlwidgets)

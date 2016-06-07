@@ -1,3 +1,5 @@
+
+
 HTMLWidgets.widget({
 
   name: 'barRating',
@@ -7,6 +9,7 @@ HTMLWidgets.widget({
   factory: function(el, width, height) {
 
     // TODO: define shared variables for this instance
+
 
     return {
 
@@ -61,4 +64,9 @@ HTMLWidgets.widget({
 
     };
   }
+});
+
+
+Shiny.addCustomMessageHandler('jsBarRatingUpdate', function(x) {
+  $("#" + x.id +  "_select").barrating("set", x.value);
 });
