@@ -43,7 +43,15 @@ HTMLWidgets.widget({
         var myValue = el.id + "_value";
         $(mySelect).barrating({
           theme: x.theme,
+          initialRating: x.initialRating,
+          showValues: x.showValues,
+          showSelectedRating: x.showSelectedRating,
+          deselectable: x.deselectable,
           reverse: x.reverse,
+          readonly: x.readonly,
+          fastClicks: x.fastClicks,
+          hoverState: x.hoverState,
+          silent: x.silent,
           onSelect: function(value, text) {
             Shiny.onInputChange(myValue, value);
           }

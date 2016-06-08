@@ -6,14 +6,36 @@
 #' @import htmltools
 #'
 #' @export
-barRating <- function(choices, selected = NULL, theme = "bars-1to10", reverse = FALSE, includeEmpty = FALSE, width = NULL, height = NULL) {
+barRating <- function(choices,
+                      selected = NULL,
+                      theme = "bars-1to10",
+                      initialRating = NULL,
+                      showValues = FALSE,
+                      showSelectedRating = TRUE,
+                      deselectable = TRUE,
+                      reverse = FALSE,
+                      readonly = FALSE,
+                      fastClicks = TRUE,
+                      hoverState = TRUE,
+                      silent = FALSE,
+                      includeEmpty = FALSE,
+                      width = NULL,
+                      height = NULL) {
 
   # forward options using x
   x = list(
     choices = choices,
     selected = selected,
     theme = theme,
+    initialRating = initialRating,
+    showValues = showValues,
+    showSelectedRating = showSelectedRating,
+    deselectable = deselectable,
     reverse = reverse,
+    readonly = readonly,
+    fastClicks = fastClicks,
+    hoverState = hoverState,
+    silent = silent,
     includeEmpty = includeEmpty
   )
 

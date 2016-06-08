@@ -4,7 +4,19 @@ library(shiny)
 library(barRating)
 
 server <- function(input, output, session) {
-  output$ex1 <- renderBarRating(barRating(choices = as.character(seq(5,0)), selected = '3', theme='bars-horizontal', reverse = TRUE, includeEmpty = FALSE))
+  output$ex1 <- renderBarRating(barRating(choices = as.character(seq(5,0)),
+                                          selected = '3',
+                                          theme = 'bars-horizontal',
+                                          initialRating = '2',
+                                          showValues = FALSE,
+                                          showSelectedRating = TRUE,
+                                          deselectable = TRUE,
+                                          reverse = TRUE,
+                                          readonly = FALSE,
+                                          fastClicks = TRUE,
+                                          hoverState = TRUE,
+                                          silent = FALSE,
+                                          includeEmpty = FALSE))
   output$txt1 <- renderPrint({input$ex1_value})
 
   observeEvent(input$butChangeValue, {
