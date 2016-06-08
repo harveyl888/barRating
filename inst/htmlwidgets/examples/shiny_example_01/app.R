@@ -7,7 +7,7 @@ server <- function(input, output, session) {
   output$ex1 <- renderBarRating(barRating(choices = as.character(seq(5,0)),
                                           selected = '3',
                                           theme = 'bars-horizontal',
-                                          initialRating = '2',
+                                          initialRating = NULL,
                                           showValues = FALSE,
                                           showSelectedRating = TRUE,
                                           deselectable = TRUE,
@@ -23,6 +23,10 @@ server <- function(input, output, session) {
     barRatingUpdate('ex1', 1, session)
   })
 
+  observeEvent(input$butClear, {
+    barRatingClear('ex1', session)
+  })
+
 }
 
 ui <- fluidPage(
@@ -31,7 +35,8 @@ ui <- fluidPage(
   selectizeInput('select2', 'selectize input', choices=paste('select',seq(1:5))),
   barRatingOutput('ex1'),
   verbatimTextOutput('txt1'),
-  actionButton('butChangeValue', 'set value to 1')
+  actionButton('butChangeValue', 'set value to 1'),
+  actionButton('butClear', 'clear the value')
 )
 
 shinyApp(ui = ui, server = server)

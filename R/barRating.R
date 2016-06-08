@@ -60,6 +60,13 @@ barRatingUpdate <- function(id, value, session=shiny::getDefaultReactiveDomain()
   session$sendCustomMessage(type = 'jsBarRatingUpdate', list(id=id, value=value))
 }
 
+#' Clear a barrating widget
+#'
+#' @export
+barRatingClear <- function(id, session=shiny::getDefaultReactiveDomain()) {
+  session$sendCustomMessage(type = 'jsBarRatingClear', list(id=id))
+}
+
 
 #' Shiny bindings for barRating
 #'

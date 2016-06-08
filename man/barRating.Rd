@@ -4,7 +4,10 @@
 \alias{barRating}
 \title{<Add Title>}
 \usage{
-barRating(choices, selected = NULL, theme = "bars-1to10", reverse = FALSE,
+barRating(choices, selected = NULL, theme = "bars-1to10",
+  initialRating = NULL, showValues = FALSE, showSelectedRating = TRUE,
+  deselectable = TRUE, reverse = FALSE, readonly = FALSE,
+  fastClicks = TRUE, hoverState = TRUE, silent = FALSE,
   includeEmpty = FALSE, width = NULL, height = NULL)
 }
 \description{

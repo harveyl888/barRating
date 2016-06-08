@@ -78,3 +78,7 @@ HTMLWidgets.widget({
 Shiny.addCustomMessageHandler('jsBarRatingUpdate', function(x) {
   $("#" + x.id +  "_select").barrating("set", x.value);
 });
+
+Shiny.addCustomMessageHandler('jsBarRatingClear', function(x) {
+  $("#" + x.id +  "_select").barrating("clear");
+});
