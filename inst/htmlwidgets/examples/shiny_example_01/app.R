@@ -15,6 +15,8 @@ server <- function(input, output, session) {
 
 ui <- fluidPage(
 
+  selectInput('select1', 'select input', choices=paste('select',seq(1:5))),
+  selectizeInput('select2', 'selectize input', choices=paste('select',seq(1:5))),
   barRatingOutput('ex1'),
   verbatimTextOutput('txt1'),
   actionButton('butChangeValue', 'set value to 1')
