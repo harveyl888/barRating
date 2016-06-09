@@ -54,6 +54,9 @@ HTMLWidgets.widget({
           silent: x.silent,
           onSelect: function(value, text) {
             Shiny.onInputChange(myValue, value);
+          },
+          onClear: function(value, text) {
+            Shiny.onInputChange(myValue, value);
           }
         });
 

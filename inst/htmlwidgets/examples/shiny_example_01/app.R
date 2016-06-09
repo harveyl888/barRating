@@ -16,7 +16,7 @@ server <- function(input, output, session) {
                                           fastClicks = TRUE,
                                           hoverState = TRUE,
                                           silent = FALSE,
-                                          includeEmpty = TRUE))
+                                          includeEmpty = FALSE))
   output$txt1 <- renderPrint({input$ex1_value})
 
   observeEvent(input$butChangeValue, {
