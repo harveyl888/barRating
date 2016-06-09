@@ -82,3 +82,7 @@ Shiny.addCustomMessageHandler('jsBarRatingUpdate', function(x) {
 Shiny.addCustomMessageHandler('jsBarRatingClear', function(x) {
   $("#" + x.id +  "_select").barrating("clear");
 });
+
+Shiny.addCustomMessageHandler('jsBarRatingReadOnly', function(x) {
+  $("#" + x.id +  "_select").barrating("readonly", x.state);
+});

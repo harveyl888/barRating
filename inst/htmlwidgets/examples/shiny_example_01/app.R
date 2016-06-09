@@ -4,19 +4,19 @@ library(shiny)
 library(barRating)
 
 server <- function(input, output, session) {
-  output$ex1 <- renderBarRating(barRating(choices = as.character(seq(5,0)),
+  output$ex1 <- renderBarRating(barRating(choices = as.character(seq(0,5)),
                                           selected = '3',
-                                          theme = 'bars-horizontal',
+                                          theme = 'bars-1to10',
                                           initialRating = NULL,
                                           showValues = FALSE,
                                           showSelectedRating = TRUE,
                                           deselectable = TRUE,
-                                          reverse = TRUE,
+                                          reverse = FALSE,
                                           readonly = FALSE,
                                           fastClicks = TRUE,
                                           hoverState = TRUE,
                                           silent = FALSE,
-                                          includeEmpty = FALSE))
+                                          includeEmpty = TRUE))
   output$txt1 <- renderPrint({input$ex1_value})
 
   observeEvent(input$butChangeValue, {
@@ -25,6 +25,10 @@ server <- function(input, output, session) {
 
   observeEvent(input$butClear, {
     barRatingClear('ex1', session)
+  })
+
+  observe({
+    barRatingReadOnly('ex1', input$chkReadOnly, session)
   })
 
 }
@@ -36,7 +40,8 @@ ui <- fluidPage(
   barRatingOutput('ex1'),
   verbatimTextOutput('txt1'),
   actionButton('butChangeValue', 'set value to 1'),
-  actionButton('butClear', 'clear the value')
+  actionButton('butClear', 'clear the value'),
+  checkboxInput('chkReadOnly', 'read only state', value = FALSE)
 )
 
 shinyApp(ui = ui, server = server)

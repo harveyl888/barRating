@@ -3,6 +3,7 @@
 export(barRating)
 export(barRatingClear)
 export(barRatingOutput)
+export(barRatingReadOnly)
 export(barRatingUpdate)
 export(renderBarRating)
 import(htmltools)

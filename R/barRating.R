@@ -67,6 +67,13 @@ barRatingClear <- function(id, session=shiny::getDefaultReactiveDomain()) {
   session$sendCustomMessage(type = 'jsBarRatingClear', list(id=id))
 }
 
+#' Toggle readonly state
+#'
+#' @export
+barRatingReadOnly <- function(id, state, session=shiny::getDefaultReactiveDomain()) {
+  session$sendCustomMessage(type = 'jsBarRatingReadOnly', list(id=id, state=state))
+}
+
 
 #' Shiny bindings for barRating
 #'
