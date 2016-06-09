@@ -1,4 +1,8 @@
 dependencies:
+ - name: jquery
+   version: 1.12.4
+   src: htmlwidgets/lib
+   script: jquery-1.12.4.min.js
  - name: barRating
    version: 1.1.4
    src: htmlwidgets/lib
