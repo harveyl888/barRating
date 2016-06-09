@@ -1,13 +1,25 @@
-#' <Add Title>
+#' jQuery Bar Rating
 #'
-#' <Add Description>
+#' create a barRating htmlwidget
+#'
+#' @param choices Vector of values to select from.
+#' @param initialRating Specify initial rating by passing select field's option value.
+#' @param showValues If set to true, rating values will be displayed on the bars.
+#' @param showSelectedRating If set to true, user selected rating will be displayed next to the widget.
+#' @param deselectable If set to true, user can deselect a rating. For this feature to work the select field must contain a first option with an empty value.
+#' @param reverse If set to true, the ratings will be reversed.
+#' @param readonly If set to true, the ratings will be read-only.
+#' @param fastClicks Remove 300ms click delay on touch devices.
+#' @param hoverState Change state on hover.
+#' @param silent Supress callbacks when controlling ratings programatically.
+#' @param selected Specify initial rating.
+#' @param includeEmpty Include an empty rating.
 #'
 #' @import htmlwidgets
 #' @import htmltools
 #'
 #' @export
 barRating <- function(choices,
-                      selected = NULL,
                       theme = "bars-1to10",
                       initialRating = NULL,
                       showValues = FALSE,
@@ -18,9 +30,8 @@ barRating <- function(choices,
                       fastClicks = TRUE,
                       hoverState = TRUE,
                       silent = FALSE,
-                      includeEmpty = FALSE,
-                      width = NULL,
-                      height = NULL) {
+                      selected = NULL,
+                      includeEmpty = FALSE) {
 
   # forward options using x
   x = list(
@@ -43,8 +54,8 @@ barRating <- function(choices,
   htmlwidgets::createWidget(
     name = 'barRating',
     x,
-    width = width,
-    height = height,
+    width = NULL,
+    height = NULL,
     package = 'barRating',
     sizingPolicy = htmlwidgets::sizingPolicy(
       viewer.fill = FALSE
@@ -53,21 +64,38 @@ barRating <- function(choices,
 }
 
 
-#' Update a barrating widget with a value
+#' Update barRating widget
+#'
+#' Update a barRating widget with a value
+#'
+#' @param id id of the widget
+#' @param value new rating value
+#' @param shiny session
 #'
 #' @export
 barRatingUpdate <- function(id, value, session=shiny::getDefaultReactiveDomain()) {
   session$sendCustomMessage(type = 'jsBarRatingUpdate', list(id=id, value=value))
 }
 
-#' Clear a barrating widget
+#' Clear barRating widget
+#'
+#' Clear a barRating widget
+#'
+#' @param id id of the widget
+#' @param shiny session
 #'
 #' @export
 barRatingClear <- function(id, session=shiny::getDefaultReactiveDomain()) {
   session$sendCustomMessage(type = 'jsBarRatingClear', list(id=id))
 }
 
-#' Toggle readonly state
+#' Set barRating read-only status
+#'
+#' Set barRating read-only status
+#'
+#' @param id id of the widget
+#' @param state logical.  True = set widget to read-only; false = set widget to read/write.
+#' @param shiny session
 #'
 #' @export
 barRatingReadOnly <- function(id, state, session=shiny::getDefaultReactiveDomain()) {

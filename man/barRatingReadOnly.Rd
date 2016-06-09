@@ -2,11 +2,18 @@
 % Please edit documentation in R/barRating.R
 \name{barRatingReadOnly}
 \alias{barRatingReadOnly}
-\title{Toggle readonly state}
+\title{Set barRating read-only status}
 \usage{
 barRatingReadOnly(id, state, session = shiny::getDefaultReactiveDomain())
 }
+\arguments{
+\item{id}{id of the widget}
+
+\item{state}{logical.  True = set widget to read-only; false = set widget to read/write.}
+
+\item{shiny}{session}
+}
 \description{
-Toggle readonly state
+Set barRating read-only status
 }
 

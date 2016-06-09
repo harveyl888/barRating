@@ -2,11 +2,18 @@
 % Please edit documentation in R/barRating.R
 \name{barRatingUpdate}
 \alias{barRatingUpdate}
-\title{Update a barrating widget with a value}
+\title{Update barRating widget}
 \usage{
 barRatingUpdate(id, value, session = shiny::getDefaultReactiveDomain())
 }
+\arguments{
+\item{id}{id of the widget}
+
+\item{value}{new rating value}
+
+\item{shiny}{session}
+}
 \description{
-Update a barrating widget with a value
+Update a barRating widget with a value
 }
 

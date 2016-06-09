@@ -2,15 +2,40 @@
 % Please edit documentation in R/barRating.R
 \name{barRating}
 \alias{barRating}
-\title{<Add Title>}
+\title{jQuery Bar Rating}
 \usage{
-barRating(choices, selected = NULL, theme = "bars-1to10",
-  initialRating = NULL, showValues = FALSE, showSelectedRating = TRUE,
-  deselectable = TRUE, reverse = FALSE, readonly = FALSE,
-  fastClicks = TRUE, hoverState = TRUE, silent = FALSE,
-  includeEmpty = FALSE, width = NULL, height = NULL)
+barRating(choices, theme = "bars-1to10", initialRating = NULL,
+  showValues = FALSE, showSelectedRating = TRUE, deselectable = TRUE,
+  reverse = FALSE, readonly = FALSE, fastClicks = TRUE,
+  hoverState = TRUE, silent = FALSE, selected = NULL,
+  includeEmpty = FALSE)
+}
+\arguments{
+\item{choices}{Vector of values to select from.}
+
+\item{initialRating}{Specify initial rating by passing select field's option value.}
+
+\item{showValues}{If set to true, rating values will be displayed on the bars.}
+
+\item{showSelectedRating}{If set to true, user selected rating will be displayed next to the widget.}
+
+\item{deselectable}{If set to true, user can deselect a rating. For this feature to work the select field must contain a first option with an empty value.}
+
+\item{reverse}{If set to true, the ratings will be reversed.}
+
+\item{readonly}{If set to true, the ratings will be read-only.}
+
+\item{fastClicks}{Remove 300ms click delay on touch devices.}
+
+\item{hoverState}{Change state on hover.}
+
+\item{silent}{Supress callbacks when controlling ratings programatically.}
+
+\item{selected}{Specify initial rating.}
+
+\item{includeEmpty}{Include an empty rating.}
 }
 \description{
-<Add Description>
+create a barRating htmlwidget
 }
 

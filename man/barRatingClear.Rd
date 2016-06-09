@@ -2,11 +2,16 @@
 % Please edit documentation in R/barRating.R
 \name{barRatingClear}
 \alias{barRatingClear}
-\title{Clear a barrating widget}
+\title{Clear barRating widget}
 \usage{
 barRatingClear(id, session = shiny::getDefaultReactiveDomain())
 }
+\arguments{
+\item{id}{id of the widget}
+
+\item{shiny}{session}
+}
 \description{
-Clear a barrating widget
+Clear a barRating widget
 }
 
