@@ -1,11 +1,11 @@
 Package: barRating
-Title: What the Package Does (one line, title case)
-Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Title: barRating htmlwidget
+Version: 0.0.1
+Authors@R: person("Harvey", "Lieberman", email = "harvey.lieberman@gmail.com", role = c("aut", "cre"))
+Description: htmlwidget for bar rating, a lightweight jquery rating.
 Depends:
     R (>= 3.3.0)
-License: What license is it under?
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 5.0.0
