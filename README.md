@@ -21,6 +21,7 @@ barRating(choices = c(1,2,3,4,5)
 
 barRating can take a number of arguments:
 -   `choices`: Vector of values to select from.
+-   `theme`: Name of a theme (themes are contained in barrating_themes.css).
 -   `initialRating`: Specify initial rating by passing select field's option value.
 -   `showValues`: If set to true, rating values will be displayed on the bars.
 -   `showSelectedRating`: If set to true, user selected rating will be displayed next to the widget.
@@ -34,12 +35,12 @@ barRating can take a number of arguments:
 -   `includeEmpty`: Include an empty rating.
 Further information on these parameters can be found at http://antenna.io/demo/jquery-bar-rating/examples/.
 
-In addition, the htmlwidget exposes several methods which cab be called as follows:
+The widget can be used in a shiny app using `barRatingOutput('id')` which exposes the rating value as `input$id_select`. 
 
--   barRatingUpdate(id, value, session) : Update value of widget id.
--   barRatingClear(id, session) : Clear a widget by reseting to initialRating if one has been specified or lowest value which can be an empty value if includeEmpty is true.
--   barRatingReadonly(id, session) : If true then widget is read only.
+In addition, the htmlwidget exposes several methods which can be called as follows:
 
-The value of the htmlwidget x is stored under x_select
+-   `barRatingUpdate(id, value, session)` : Update value of widget id.
+-   `barRatingClear(id, session)` : Clear a widget by reseting to initialRating if one has been specified or lowest value which can be an empty value if includeEmpty is true.
+-   `barRatingReadonly(id, session)` : If true then widget is read only.
 
 An shiny example, highlighting some of the features, can be found at ./inst/htmlwidgets/examples/shiny_example_01/
