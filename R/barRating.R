@@ -3,6 +3,7 @@
 #' create a barRating htmlwidget
 #'
 #' @param choices Vector of values to select from.
+#' @param theme Name of a theme.
 #' @param initialRating Specify initial rating by passing select field's option value.
 #' @param showValues If set to true, rating values will be displayed on the bars.
 #' @param showSelectedRating If set to true, user selected rating will be displayed next to the widget.

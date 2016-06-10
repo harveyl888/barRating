@@ -13,6 +13,8 @@ barRating(choices, theme = "bars-1to10", initialRating = NULL,
 \arguments{
 \item{choices}{Vector of values to select from.}
 
+\item{theme}{Name of a theme.}
+
 \item{initialRating}{Specify initial rating by passing select field's option value.}
 
 \item{showValues}{If set to true, rating values will be displayed on the bars.}
