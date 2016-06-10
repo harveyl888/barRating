@@ -34,8 +34,12 @@ barRating can take a number of arguments:
 -   `includeEmpty`: Include an empty rating.
 Further information on these parameters can be found at http://antenna.io/demo/jquery-bar-rating/examples/.
 
-In addition, the htmlwidget exposes several methods which cab be called as:
+In addition, the htmlwidget exposes several methods which cab be called as follows:
 
 -   barRatingUpdate(id, value, session) : Update value of widget id.
 -   barRatingClear(id, session) : Clear a widget by reseting to initialRating if one has been specified or lowest value which can be an empty value if includeEmpty is true.
 -   barRatingReadonly(id, session) : If true then widget is read only.
+
+The value of the htmlwidget x is stored under x_select
+
+An shiny example, highlighting some of the features, can be found at ./inst/htmlwidgets/examples/shiny_example_01/
