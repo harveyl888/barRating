@@ -1,7 +1,7 @@
 # barRating
-An R htmlwidget wrapper for jquery bar rating.
+An R htmlwidget wrapper for jquery bar rating
 
-The jquery bar rating is a lightweight rating widget which can be styled using css themes.  The javascript library can be found at https://github.com/antennaio/jquery-bar-rating and examples can be found at http://antenna.io/demo/jquery-bar-rating/examples/.
+The jquery bar rating is a lightweight rating widget written by @antennaio which can be styled using css themes.  The javascript library can be found at https://github.com/antennaio/jquery-bar-rating and examples can be found at http://antenna.io/demo/jquery-bar-rating/examples/.
 
 
 This htmlwidget allows bar ratings to be used in shiny apps.
