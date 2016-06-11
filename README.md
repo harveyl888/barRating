@@ -21,7 +21,7 @@ barRating(choices = c(1,2,3,4,5)
 
 barRating can take a number of arguments:
 -   `choices`: Vector of values to select from.
--   `theme`: Name of a theme (themes are contained in barrating_themes.css).
+-   `theme`: Name of a theme (themes are contained in barrating_themes.css).  The following are currently supported: bars-1to10, bars-horizontal, bars-movie, bars-pill, bars-reversed, bars-square, bootstrap-stars and css-stars.
 -   `initialRating`: Specify initial rating by passing select field's option value.
 -   `showValues`: If set to true, rating values will be displayed on the bars.
 -   `showSelectedRating`: If set to true, user selected rating will be displayed next to the widget.
