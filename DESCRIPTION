@@ -1,7 +1,7 @@
 Package: barRating
 Title: barRating htmlwidget
 Version: 0.0.1
-Authors@R: c(person("Harvey", "Lieberman", email = "harvey.lieberman@gmail.com", role = c("aut", "cre")),person("Kazik", "Pietruszewski", email = "antenna@antenna.io", role = "aut", comment = "jquery-bar-rating javascript library"))
+Authors@R: c(person("Harvey", "Lieberman", email = "harvey.lieberman@gmail.com", role = c("aut", "cre")),person("Kazik", "Pietruszewski", email = "antenna@antenna.io", role = c("aut", "cph"), comment = "jquery-bar-rating javascript library"))
 Description: htmlwidget for bar rating, a lightweight jquery rating.
 Depends:
     R (>= 3.3.0)
